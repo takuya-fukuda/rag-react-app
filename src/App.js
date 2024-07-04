@@ -1,25 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import React from 'react'; //Reactを読み込んでいる
+//画面遷移で使用する{ BrowserRouter, Route, Switch }を'react-router-dom'から読み込んでいる
+//import { BrowserRouter, Route, Switch } from 'react-router-dom'; 古いバージョン
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Page1 from './page1'; //作成したpage1.jsを読み込んでいる
+import Page2 from './page2'; //追加　page2を読み込んでいる
+import Page3 from './page3'; //追加　page2を読み込んでいる
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render(){
+    return(
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Page1 />} /> {/* URLのパスが'/'のみの時にPage1を表示する */}
+          <Route exact path="/page2" element={<Page2 />} /> {/* 追加　URLで/page2を指定するとPage2を表示する */}
+          <Route exact path="/page3" element={<Page3 />} />
+        </Routes>
+      </Router>
+    );
+  };
 }
 
 export default App;
