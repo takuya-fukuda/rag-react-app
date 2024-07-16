@@ -4,8 +4,8 @@ import HomeIcon from '@mui/icons-material/Home';
 //import AssessmentIcon from "@mui/icons-material/Assessment";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import AddCardIcon from "@mui/icons-material/AddCard";
-import BackupIcon from "@mui/icons-material/Backup";
-import SettingsIcon from "@mui/icons-material/Settings";
+//import BackupIcon from "@mui/icons-material/Backup";
+//import SettingsIcon from "@mui/icons-material/Settings";
 import QueryStatsIcon from '@mui/icons-material/QueryStats';
 
 //アイコンのインポートの仕方は下記から検索してコマンドがわかる
@@ -28,23 +28,13 @@ export const SidebarData = [
         link: "/page3",
       },
       {
-        title: "友達追加",
+        title: "RAGデータ登録",
         icon: <PersonAddIcon />,
-        link: "/friends",
+        link: "/page4",
       },
       {
-        title: "お支払い設定",
+        title: "RAG検索",
         icon: <AddCardIcon />,
-        link: "/payment",
-      },
-      {
-        title: "アップロード",
-        icon: <BackupIcon />,
-        link: "/upload",
-      },
-      {
-        title: "詳細設定",
-        icon: <SettingsIcon />,
-        link: "/rocket",
+        link: "/page5",
       },
 ]

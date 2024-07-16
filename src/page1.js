@@ -8,6 +8,14 @@ class Page1 extends React.Component {   //Page1クラスにReact.Componentを継
         return (
             <div className="Page1">
                 <Sidebar /> {/* サイドバーを作成するコンポーネント */}
+                <div className="Content">
+                    <h1>RAG APP</h1>
+                        <p>これはRAGアプリのサンプルUIです</p>
+                        <p>設計書⇒マニュアル</p>
+                        <p>マニュアルからHTML化</p>
+                        <p>HTMLのアップロード</p>
+                        <p>RAGの回答</p>                    
+                </div>
             </div>
         );
     }

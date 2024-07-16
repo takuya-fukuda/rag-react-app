@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './Page2.css';
+import Sidebar from "./components/Sidebar"
 
 const Page2 = () => {
     const [responseData, setResponseData] = useState(null);
@@ -32,21 +34,24 @@ const Page2 = () => {
     }
 
     return (
-        <div>
-            <h1>RagApp2 マニュアル作成</h1>
-            <button onClick={fetchData}>API①</button>
-            {error && <pre>Error: {error}</pre>}
-            {responseData && (
-                <div>
-                    <pre>{JSON.stringify(responseData, null, 2)}</pre>
+        <div className="Page2">
+            <Sidebar /> {/* サイドバーを作成するコンポーネント */}
+            <div className="Content">
+                <h1>RagApp2 マニュアル作成</h1>
+                <button onClick={fetchData}>API①</button>
+                {error && <pre>Error: {error}</pre>}
+                {responseData && (
                     <div>
-                        <h2>{responseData.data[0].headline}</h2>
-                        <p dangerouslySetInnerHTML={{ __html: responseData.data[0].manual.replace(/\n/g, '<br>') }}></p>
+                        <pre>{JSON.stringify(responseData, null, 2)}</pre>
+                        <div>
+                            <h2>{responseData.data[0].headline}</h2>
+                            <p dangerouslySetInnerHTML={{ __html: responseData.data[0].manual.replace(/\n/g, '<br>') }}></p>
+                        </div>
                     </div>
-                </div>
-            )}
-            <br/>
-            <Link to={`/`}>Go To page1</Link>
+                )}
+                <br/>
+                <Link to={`/`}>ホームへ戻る</Link>
+            </div>
         </div>
     );
 }
