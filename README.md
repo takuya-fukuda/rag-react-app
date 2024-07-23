@@ -1,9 +1,11 @@
-## 概要  
-これはRAGアプリのサンプルUIとなります。  
-バックエンドは下記で実装それています。  
-バックエンドのフレームワークはDjangoのRESTAPI  
-https://github.com/takuya-fukuda/rag  
+## 概要
 
-## Reactについて  
-今回実装が初めての為、usestate,useeffectなどのReacthooksについて意識して実装。  
-コンポーネントもできるだけ実装する  
+これは RAG アプリのサンプル UI となります。  
+バックエンドは下記で実装それています。  
+バックエンドのフレームワークは Django の RESTAPI  
+https://github.com/takuya-fukuda/rag
+
+## React について
+
+今回実装が初めての為、usestate,useeffect などの Reacthooks について意識して実装。  
+コンポーネントもできるだけ実装する
